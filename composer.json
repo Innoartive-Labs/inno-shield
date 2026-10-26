@@ -1,0 +1,62 @@
+{
+    "name": "innoartive-labs/inno-shield-php",
+    "description": "A lightweight, framework-independent PHP security-header library inspired by Express Helmet.",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/Innoartive-Labs/inno-shield",
+    "keywords": [
+        "security",
+        "headers",
+        "http",
+        "csp",
+        "hsts",
+        "helmet",
+        "laravel",
+        "lumen",
+        "middleware",
+        "psr-15",
+        "content-security-policy",
+        "security-headers"
+    ],
+    "authors": [
+        {
+            "name": "Innoartive Labs",
+            "role": "Organization"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/Innoartive-Labs/inno-shield/issues",
+        "source": "https://github.com/Innoartive-Labs/inno-shield"
+    },
+    "require": {
+        "php": ">=8.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5 || ^11.0",
+        "psr/http-server-middleware": "^1.0",
+        "psr/http-server-handler": "^1.0",
+        "psr/http-message": "^1.1 || ^2.0"
+    },
+    "suggest": {
+        "psr/http-server-middleware": "Required to use ShieldPsr15Middleware (formal PSR-15 interface compliance).",
+        "psr/http-server-handler": "Required to use ShieldPsr15Middleware (formal PSR-15 interface compliance).",
+        "psr/http-message": "Required to use ShieldPsr15Middleware (formal PSR-15 interface compliance).",
+        "illuminate/http": "Required to use the Laravel/Lumen middleware adapter (Innoartive\\Shield\\Laravel\\ShieldMiddleware)."
+    },
+    "autoload": {
+        "psr-4": {
+            "Innoartive\\Shield\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Innoartive\\Shield\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
